@@ -32,7 +32,7 @@ namespace UnitTestLab
 			TestList.push_back(1);
 			TestList.push_back(2);
 			Assert::IsTrue(TestList.get_size() == 2);
-			TestList.pop_front();
+			TestList.pop_back();
 			Assert::IsTrue(TestList.get_size() == 1);
 			int element = TestList.at(0);
 			Assert::IsTrue(element == 1);
