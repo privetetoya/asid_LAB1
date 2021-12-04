@@ -51,8 +51,8 @@ int main() {
     List.isEmpty();
     cout << List << endl;
     cout << "Let's create a new list: \n";
-    New_List.push_front(2);
-    New_List.push_back(1);
+    New_List.push_front(1);
+    New_List.push_back(2);
     cout << New_List << endl;
     cout << "Find the index of the last occurrence in the List: \n";
     try {
