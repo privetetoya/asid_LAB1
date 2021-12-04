@@ -61,8 +61,8 @@ int main() {
     catch (const invalid_argument error) {
         cout << error.what() << endl;
     }
-    List.push_back(2);
     List.push_back(1);
+    List.push_back(2);
     cout << "Add elements to the end of an existing List: \n";
     cout << List << endl;
     cout << "Find the index of the last occurrence in the List: \n";
