@@ -204,15 +204,18 @@ namespace UnitTestLab
 			List TestList;
 			List SecondTestList;
 			TestList.push_back(1);
-			TestList.push_front(2);
+			TestList.push_back(2);
 			SecondTestList.push_back(3);
-			SecondTestList.push_front(4);
+			SecondTestList.push_back(4);
 			try {
 				TestList.find_last(SecondTestList);
 			}
 			catch (const invalid_argument error) {
 				Assert::AreEqual("Not included", error.what());
 			}
+			TestList.push_back(3);
+			TestList.push_back(4);
+			Assert::IsTrue(TestList.find_last(SecondTestList) == 2);
 
 		}
 	};

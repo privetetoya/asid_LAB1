@@ -72,7 +72,5 @@ int main() {
     catch (const invalid_argument error) {
         cout << error.what();
     }
-
-
     return 0;
 }
