@@ -141,7 +141,7 @@ namespace UnitTestLab
 			List TestList;
 			TestList.push_back(1);
 			TestList.push_back(2);
-			TestList.insert(3, 3);
+			TestList.insert(3, 1);
 			Assert::IsTrue(TestList.get_size() == 3);
 			try {
 				TestList.remove(-100);
@@ -155,7 +155,7 @@ namespace UnitTestLab
 			catch (const out_of_range error) {
 				Assert::AreEqual("Out of range", error.what());
 			}
-			TestList.remove(3);
+			TestList.remove(1);
 			Assert::IsTrue(TestList.get_size() == 2);
 			int element1 = TestList.at(0);
 			int element2 = TestList.at(1);
@@ -202,28 +202,18 @@ namespace UnitTestLab
 		TEST_METHOD(FindLast)
 		{
 			List TestList;
-			TestList.push_back(3);
-			TestList.push_front(1);
-			List NewTestList;
-			NewTestList.push_back(3);
-			NewTestList.push_front(9);
-			stringstream output;
+			List SecondTestList;
+			TestList.push_back(1);
+			TestList.push_front(2);
+			SecondTestList.push_back(3);
+			SecondTestList.push_front(4);
 			try {
-				TestList.find_last(NewTestList);
+				TestList.find_last(SecondTestList);
 			}
 			catch (const invalid_argument error) {
 				Assert::AreEqual("Not included", error.what());
 			}
 
-			TestList.insert(2, 2);
-			TestList.push_back(4);
-			output << TestList.find_last(NewTestList);
-			int element = TestList.at(3);
-			Assert::IsTrue(element == 4);
-			TestList.pop_back();
-			output << TestList.find_last(NewTestList);
-			int element1 = TestList.at(2);
-			Assert::IsTrue(element1 == 2);
 		}
 	};
 }

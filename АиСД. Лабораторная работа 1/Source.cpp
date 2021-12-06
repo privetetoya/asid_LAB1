@@ -19,16 +19,16 @@ int main() {
     List.pop_back();
     List.pop_front();
     cout << List << endl;
-    cout << "Insert element in the middle " << endl;
+    cout << "Let's try to insert element in the middle " << endl;
     try
     {
-        List.insert(5, 6);
+        List.insert(100, 100);
     }
     catch (const out_of_range error)
     {
         cout << error.what() << endl;
     }
-    cout << "Let's try another ";
+    cout << "Let's try again ";
     List.insert(1, 1);
     cout << List << endl;
     cout << "Let's try to find the value of the first element ";
@@ -50,7 +50,7 @@ int main() {
     cout << "Let's check for a blank list ";
     List.isEmpty();
     cout << List << endl;
-    cout << "Let's create a new list: \n";
+    cout << "Let's create a new list: " << endl;
     New_List.push_front(1);
     New_List.push_back(2);
     cout << New_List << endl;
@@ -63,9 +63,9 @@ int main() {
     }
     List.push_back(1);
     List.push_back(2);
-    cout << "Add elements to the end of an existing List: \n";
+    cout << "Add elements to the end of an existing List: " << endl;
     cout << List << endl;
-    cout << "Find the index of the last occurrence in the List: \n";
+    cout << "Find the index of the last occurrence in the List: " << endl;
     try {
         cout << List.find_last(New_List);
     }
